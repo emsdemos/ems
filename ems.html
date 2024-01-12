@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System | SHIRO Technologies LLC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Employee Management System - SHIRO Technologies LLC</h1>
+    <h2>Designed by Satish Mohan | Furthered by Akash Vijaykumar</h2>
+
+    <form id="employeeForm">
+        <label for="candidateName">Candidate Name:</label>
+        <input type="text" id="candidateName" name="candidateName" required>
+
+        <label for="implementationPartner">Implementation Partner:</label>
+        <input type="text" id="implementationPartner" name="implementationPartner" required>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <p id="result">View the result here: </p>
+
+    <script>
+        function submitForm() {
+            var candidateName = document.getElementById("candidateName").value;
+            var implementationPartner = document.getElementById("implementationPartner").value;
+
+            var resultLabel = document.getElementById("result");
+            var currentDate = new Date().toLocaleString();
+
+            resultLabel.textContent = "View the result here: " + currentDate;
+        }
+    </script>
+
+</body>
+</html>
